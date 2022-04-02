@@ -11,9 +11,17 @@ USE ESTUDO;
 # Criando Tabelas
 CREATE TABLE pessoa
 (
-nome VARCHAR(20) PRIMARY KEY,
+id INT NOT NULL PRIMARY KEY auto_increment,
+nome VARCHAR(20),
 nascimento DATE
 );
 
 # Deletando a Tabela. Foi criada sem uma PK
 DROP TABLE pessoa;
+
+# Inserindo dados na tabela
+# Comando INSERT INTO nome_tabela VALUES('nome_pessoa', )
+INSERT INTO pessoa(nome,nascimento) VALUES('Pablo Nascimento', '1991-08-14');
+
+# Comando SELECT - visualizar os dados já salvos. 
+SELECT * FROM pessoa;
