@@ -11,7 +11,7 @@ USE ESTUDO;
 # Criando Tabelas
 CREATE TABLE pessoa
 (
-nome VARCHAR(20),
+nome VARCHAR(20) PRIMARY KEY,
 nascimento DATE
 );
 
