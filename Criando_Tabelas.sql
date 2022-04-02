@@ -13,4 +13,7 @@ CREATE TABLE pessoa
 (
 nome VARCHAR(20),
 nascimento DATE
-)
+);
+
+# Deletando a Tabela. Foi criada sem uma PK
+DROP TABLE pessoa;
