@@ -20,8 +20,10 @@ nascimento DATE
 DROP TABLE pessoa;
 
 # Inserindo dados na tabela
-# Comando INSERT INTO nome_tabela VALUES('nome_pessoa', )
+# Comando INSERT INTO nome_tabela(coluna_1, coluna_2) VALUES('nome_pessoa', nascimento)
 INSERT INTO pessoa(nome,nascimento) VALUES('Pablo Nascimento', '1991-08-14');
 
 # Comando SELECT - visualizar os dados já salvos. 
 SELECT * FROM pessoa;
+
+
