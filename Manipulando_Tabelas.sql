@@ -24,16 +24,19 @@ SELECT nome, nascimento FROM pessoa;
 # UPDATE - Atualizando informações na tabela
 # clausula WHERE - usada, para neste caso, indicar o campo onde se quer atualizar.
 # UPDATE nome_tabela SET nome_campo = 'dado_para_atualizar' WHERE id = 1
-UPDATE pessoa SET nome = 'Teste_03' WHERE id = 5;
+UPDATE pessoa SET nome = 'Pablito' WHERE id = 2;
 
 # DELETE - Apagar dados. Uso semelhante ao do comando acima.
 # DELETE from nome_tabela WHERE id = 1;
 # Utilizar este comando com a condicional WHERE campo = condicao
 
 # ORDER BY - Ordenacao dos dados de forma crescente, ou de forma decrescente.
-# SELECT * FROM nome_tabela ORDER BY campo;
+# SELECT * FROM nome_tabela ORDER BY campo DESC;
+# DESC - Clausula usada para ordenação de forma decrescente
 SELECT * FROM pessoa ORDER BY nome;
-SELECT * FROM pessoa ORDER BY nascimento;
+SELECT * FROM pessoa ORDER BY nascimento DESC;
+
+
 
 
 
