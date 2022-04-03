@@ -9,7 +9,7 @@ USE ESTUDO;
 # Inserindo mais dados para posterior manipulação
 INSERT INTO pessoa(nome,nascimento) VALUES ('Teste_01','2022-03-31');
 INSERT INTO pessoa(nome,nascimento) VALUES ('Teste_02','2022-04-30');
-INSERT INTO pessoa(nome,nascimento) VALUES ('Teste_003','2022-04-01');
+INSERT INTO pessoa(nome,nascimento) VALUES ('AB','2022-04-03');
 
 # Trabalhando com SELECT
 # SELECT * FROM nome_tabela
@@ -28,5 +28,13 @@ UPDATE pessoa SET nome = 'Teste_03' WHERE id = 5;
 
 # DELETE - Apagar dados. Uso semelhante ao do comando acima.
 # DELETE from nome_tabela WHERE id = 1;
+# Utilizar este comando com a condicional WHERE campo = condicao
+
+# ORDER BY - Ordenacao dos dados de forma crescente, ou de forma decrescente.
+# SELECT * FROM nome_tabela ORDER BY campo;
+SELECT * FROM pessoa ORDER BY nome;
+SELECT * FROM pessoa ORDER BY nascimento;
+
+
 
 
