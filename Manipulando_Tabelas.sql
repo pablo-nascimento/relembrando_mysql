@@ -26,5 +26,7 @@ SELECT nome, nascimento FROM pessoa;
 # UPDATE nome_tabela SET nome_campo = 'dado_para_atualizar' WHERE id = 1
 UPDATE pessoa SET nome = 'Teste_03' WHERE id = 5;
 
+# DELETE - Apagar dados. Uso semelhante ao do comando acima.
+# DELETE from nome_tabela WHERE id = 1;
 
 
