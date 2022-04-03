@@ -38,6 +38,8 @@ SELECT * FROM pessoa ORDER BY nascimento DESC;
 
 
 # Agrupamento - contar quantas informacoes atendem a um determinado critério.
+# Clausula COUNT - usada para contar quantos campos atendem ao criterio de agrupamento.
+SELECT count(id), genero FROM pessoa GROUP BY genero;
 
 
 # Clausula ALTER TABLE - Alteracoes em tabelas já criadas.
