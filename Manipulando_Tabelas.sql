@@ -20,3 +20,11 @@ SELECT * FROM pessoa;
 SELECT nome FROM pessoa;
 SELECT id, nome FROM pessoa;
 SELECT nome, nascimento FROM pessoa;
+
+# UPDATE - Atualizando informações na tabela
+# clausula WHERE - usada, para neste caso, indicar o campo onde se quer atualizar.
+# UPDATE nome_tabela SET nome_campo = 'dado_para_atualizar' WHERE id = 1
+UPDATE pessoa SET nome = 'Teste_03' WHERE id = 5;
+
+
+
