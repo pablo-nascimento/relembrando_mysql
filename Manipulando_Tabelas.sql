@@ -41,7 +41,6 @@ SELECT * FROM pessoa ORDER BY nascimento DESC;
 # Clausula COUNT - usada para contar quantos campos atendem ao criterio de agrupamento.
 SELECT count(id), genero FROM pessoa GROUP BY genero;
 
-
 # Clausula ALTER TABLE - Alteracoes em tabelas já criadas.
 # ALTER TABLE nome_tabela O_QUE SE QUER FAZER (ADD) nome_campo TIPO_DE_DADO(TAMANHO)
 # NOT NULL ONDE_SE_QUER_COLOCAR_O_CAMPO(AFTER OU BEFORE, por exemplo) nome_campo
