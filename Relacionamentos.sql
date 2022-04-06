@@ -44,6 +44,10 @@ SELECT * FROM autor;
 # Antes, string, agora, INT. 
 ALTER TABLE videos MODIFY COLUMN autor INT NOT NULL;
 
+# Alterando o nome da coluna na tabela videos para ser uma FK. 
+ALTER TABLE videos CHANGE autor id_autor INT NOT NULL;
 
+UPDATE videos SET autor = 4 where id_video = 4;
+SELECT * FROM videos;
 
 
