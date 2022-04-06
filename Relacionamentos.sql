@@ -24,6 +24,8 @@ INSERT INTO videos (autor, titulo, likes, dislikes) VALUES ('Sergio', 'Linux', 1
 INSERT INTO videos (autor, titulo, likes, dislikes) VALUES ('Pedro', 'JavaScript', 45, 12);
 INSERT INTO videos (autor, titulo, likes, dislikes) VALUES ('Lara', 'Azure', 245909, 0);
 
+UPDATE videos SET autor = "" WHERE id_video = 7;
+
 SELECT * FROM videos;
 
 CREATE TABLE autor
@@ -35,6 +37,10 @@ data_nascimento DATE
 
 INSERT INTO autor (nome, data_nascimento) VALUES ('Pedro', '1999-05-05');
 INSERT INTO autor (nome, data_nascimento) VALUES ('Lara', '2002-08-02');
+
+SELECT * FROM autor;
+
+ALTER TABLE videos ALTER autor INT NOT NULL AFTER id_video;
 
 
 
