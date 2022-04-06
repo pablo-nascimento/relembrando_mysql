@@ -40,7 +40,9 @@ INSERT INTO autor (nome, data_nascimento) VALUES ('Lara', '2002-08-02');
 
 SELECT * FROM autor;
 
-ALTER TABLE videos ALTER autor INT NOT NULL AFTER id_video;
+# Alterando o tipo de dado da coluna autor, dentro da tabela videos.
+# Antes, string, agora, INT. 
+ALTER TABLE videos MODIFY COLUMN autor INT NOT NULL;
 
 
 
