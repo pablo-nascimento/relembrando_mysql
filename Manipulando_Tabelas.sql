@@ -46,7 +46,13 @@ SELECT count(id), genero FROM pessoa GROUP BY genero;
 # NOT NULL ONDE_SE_QUER_COLOCAR_O_CAMPO(AFTER OU BEFORE, por exemplo) nome_campo
 ALTER TABLE pessoa ADD genero VARCHAR(1) AFTER nascimento;
 
+# ALTER TABLE para adicionar FK a coluna já criada.
+# ALTER TABLE nome_tabela_fk(id_fk) ADD FOREIGN KEY (coluna_fk) REFERENCES nome_tabela_pk(id_pk);
 ALTER TABLE videos ADD foreign key (id_autor) REFERENCES autor(id_autor);
+
+# Select com JOIN. 
+# SELECT * from tabela_1 JOIN tabela_2 ON tabela_1.id_pk = tabela_2.id_pk
+SELECT * FROM videos JOIN autor ON videos.id_autor = autor.id_autor;
 
 SELECT * FROM videos;
 SELECT * FROM autor;
