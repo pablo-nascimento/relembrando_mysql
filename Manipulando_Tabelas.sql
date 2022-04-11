@@ -69,9 +69,11 @@ categoria VARCHAR(20)
 # Alimentando a tabela SEO
 INSERT INTO seo (categoria) VALUES ('Back-End');
 
+DELETE FROM seo WHERE id_seo = 3;
 #INSERT INTO videos (id_autor, titulo, likes, dislikes) VALUES
 
-
+ALTER TABLE videos drop id_seo; # INT NOT NULL;
+ALTER TABLE videos ADD FOREIGN KEY (id_seo) REFERENCES seo(id_seo);
 
 
 
