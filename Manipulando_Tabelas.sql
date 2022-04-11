@@ -58,12 +58,16 @@ SELECT videos.titulo, autor.nome FROM videos JOIN autor ON videos.id_autor = aut
 SELECT * FROM videos;
 SELECT * FROM autor;
 SELECT * FROM pessoa;
+SELECT * FROM seo;
 
 CREATE TABLE seo
 (
 id_seo INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 categoria VARCHAR(20)
 );
+
+# Alimentando a tabela SEO
+INSERT INTO seo (categoria) VALUES ('Back-End');
 
 #INSERT INTO videos (id_autor, titulo, likes, dislikes) VALUES
 
