@@ -53,12 +53,19 @@ ALTER TABLE videos ADD foreign key (id_autor) REFERENCES autor(id_autor);
 # Select com JOIN. 
 # SELECT * from tabela_1 JOIN tabela_2 ON tabela_1.id_pk = tabela_2.id_pk
 SELECT * FROM videos JOIN autor ON videos.id_autor = autor.id_autor;
+SELECT videos.titulo, autor.nome FROM videos JOIN autor ON videos.id_autor = autor.id_autor;
 
 SELECT * FROM videos;
 SELECT * FROM autor;
 SELECT * FROM pessoa;
 
+CREATE TABLE seo
+(
+id_seo INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+categoria VARCHAR(20)
+);
 
+#INSERT INTO videos (id_autor, titulo, likes, dislikes) VALUES
 
 
 
