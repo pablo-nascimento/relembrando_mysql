@@ -60,6 +60,9 @@ SELECT * FROM autor;
 SELECT * FROM pessoa;
 SELECT * FROM seo;
 
+UPDATE videos SET titulo = 'Python e Data Science' WHERE id_video = 3;
+
+
 CREATE TABLE seo
 (
 id_seo INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -67,13 +70,15 @@ categoria VARCHAR(20)
 );
 
 # Alimentando a tabela SEO
-INSERT INTO seo (categoria) VALUES ('Back-End');
+INSERT INTO seo (categoria) VALUES ('SOs');
 
 DELETE FROM seo WHERE id_seo = 3;
 #INSERT INTO videos (id_autor, titulo, likes, dislikes) VALUES
 
 ALTER TABLE videos drop id_seo; # INT NOT NULL;
+ALTER TABLE videos ADD id_seo INT NOT NULL AFTER titulo; # FOREIGN KEY REFERENCES seo(id_seo);
 ALTER TABLE videos ADD FOREIGN KEY (id_seo) REFERENCES seo(id_seo);
+ALTER TABLE videos ADD CONSTRAINT id_seo FOREIGN KEY (id_seo) REFERENCES seo(id_seo);
 
 
 
