@@ -80,5 +80,6 @@ ALTER TABLE videos ADD id_seo INT NOT NULL AFTER titulo; # FOREIGN KEY REFERENCE
 ALTER TABLE videos ADD FOREIGN KEY (id_seo) REFERENCES seo(id_seo);
 ALTER TABLE videos ADD CONSTRAINT id_seo FOREIGN KEY (id_seo) REFERENCES seo(id_seo);
 
-
+# Consultando a tabela de videos juntamente com a tabela de categoria. 
+SELECT * FROM videos JOIN seo ON videos.id_seo = seo.id_seo;
 
