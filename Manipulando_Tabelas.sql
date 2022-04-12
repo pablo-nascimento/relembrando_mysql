@@ -59,6 +59,7 @@ SELECT * FROM videos;
 SELECT * FROM autor;
 SELECT * FROM pessoa;
 SELECT * FROM seo;
+SELECT * FROM playlist;
 
 UPDATE videos SET titulo = 'Python e Data Science' WHERE id_video = 3;
 
@@ -90,5 +91,28 @@ SELECT videos.titulo, seo.categoria FROM videos JOIN seo ON videos.id_seo = seo.
 SELECT autor.nome, videos.titulo, seo.categoria FROM autor JOIN videos on videos.id_autor = autor.id_autor 
 JOIN seo ON videos.id_seo = seo.id_seo;
 
+# Nova Tabela
+CREATE TABLE playlist
+(
+id_playlist INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nome_playlist VARCHAR(30)
+);
+
+INSERT INTO playlist (nome_playlist) VALUES('Python para Data Science');
+
+# Criando nova tabela para receber o relacionamento do tipo 1 para muitos.
+CREATE TABLE videos_playlist
+(
+id_vp INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+id_video INT NOT NULL,
+id_playlist INT NOT NULL
+);
+
+INSERT INTO videos_playlist(id_video, id_playlist) VALUES (1,3);
+
+# Select entre 3 tabelas.
+SELECT * FROM videos_playlist 
+JOIN playlist ON videos_playlist.id_playlist = playlist.id_playlist
+JOIN videos ON videos_playlist.id_video = videos.id_video;
 
 
