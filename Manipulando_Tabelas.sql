@@ -100,7 +100,7 @@ nome_playlist VARCHAR(30)
 
 INSERT INTO playlist (nome_playlist) VALUES('Python para Data Science');
 
-# Criando nova tabela para receber o relacionamento do tipo 1 para muitos.
+# Criando nova tabela para receber o relacionamento do tipo muitos para muitos.
 CREATE TABLE videos_playlist
 (
 id_vp INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -114,5 +114,9 @@ INSERT INTO videos_playlist(id_video, id_playlist) VALUES (1,3);
 SELECT * FROM videos_playlist 
 JOIN playlist ON videos_playlist.id_playlist = playlist.id_playlist
 JOIN videos ON videos_playlist.id_video = videos.id_video;
+
+# Construir mais relaçoes entre as tabelas
+# 11.04.2022 21h28
+# Autor da playlist (adicionar o campo), nome da playlist, nome do video e autor do video.
 
 
