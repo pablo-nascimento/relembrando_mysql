@@ -84,5 +84,11 @@ ALTER TABLE videos ADD CONSTRAINT id_seo FOREIGN KEY (id_seo) REFERENCES seo(id_
 SELECT * FROM videos JOIN seo ON videos.id_seo = seo.id_seo;
 
 # Refinando a busca, definindo campos específicos.
+# SELECT nome_tabela.campo_tabela, nome_tabela2.campo_tabela2 FROM nome_tabela1
+# JOIN nome_tabela2 ON nome_tabela2.fk = nome_tabela1.pk.
 SELECT videos.titulo, seo.categoria FROM videos JOIN seo ON videos.id_seo = seo.id_seo;
+SELECT autor.nome, videos.titulo, seo.categoria FROM autor JOIN videos on videos.id_autor = autor.id_autor 
+JOIN seo ON videos.id_seo = seo.id_seo;
+
+
 
