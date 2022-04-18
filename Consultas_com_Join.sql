@@ -33,3 +33,22 @@ INSERT INTO `videos` (`id_video`, `nome_video`, `autor_video`) VALUES
 (4, 'Funções com PHP', 'PHP'),
 (5, 'Páginas com HTML', 'HTML');
 
+CREATE TABLE videos_canais
+(
+id_videos_canais INT(11) NOT NULL,
+id_canal INT(11) NOT NULL,
+id_video INT(11) NOT NULL
+);
+
+
+INSERT INTO `videos_canais` (`id_videos_canais`, `id_canal`, `id_video`) VALUES
+(1, 2, 4),
+(2, 2, 3),
+(3, 1, 1),
+(4, 1, 2),
+(5, 4, 5);
+
+
+
+
+
