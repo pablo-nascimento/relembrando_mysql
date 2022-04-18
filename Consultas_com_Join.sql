@@ -73,9 +73,15 @@ SELECT * FROM canais;
 # Consultas de várias tabelas.
 SELECT * FROM videos_canais JOIN videos ON videos.id_video = videos_canais.id_video;
 
+# Consultando duas tabelas
 SELECT * FROM videos_canais JOIN videos ON videos.id_video = videos_canais.id_video
 JOIN canais ON videos_canais.id_canal = canais.id_canal;
 
+# Consultando tres tabelas.
+SELECT videos.nome_video, videos.autor_video, canais.nome_canal 
+FROM videos_canais
+JOIN videos ON videos_canais.id_video = videos.id_video 
+JOIN canais ON videos_canais.id_canal = canais.id_canal;
 
 
 
