@@ -3,16 +3,19 @@
 # Digital Innovation One
 # 18.04.2022 - 19h51
 
+# Criando novo database para estudo
 CREATE DATABASE CONSULTA;
 
 USE CONSULTA;
 
+# Criando novas tabelas
 CREATE TABLE canais
 (
 id_canal INT(11) NOT NULL,
 nome_canal VARCHAR(100) NOT NULL
 );
 
+# Inserindo novos dados nestas tabelas.
 INSERT INTO `canais` (`id_canal`, `nome_canal`) VALUES
 (1, 'React'),
 (2, 'PHP'),
@@ -40,13 +43,16 @@ id_canal INT(11) NOT NULL,
 id_video INT(11) NOT NULL
 );
 
-
 INSERT INTO `videos_canais` (`id_videos_canais`, `id_canal`, `id_video`) VALUES
 (1, 2, 4),
 (2, 2, 3),
 (3, 1, 1),
 (4, 1, 2),
 (5, 4, 5);
+
+# Alterando campos de nome id, para serem chaves primárias (PK)
+ALTER TABLE videos ADD PRIMARY KEY (id_video);
+ALTER TABLE canais ADD PRIMARY KEY (id_canal);
 
 
 
