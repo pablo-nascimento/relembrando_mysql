@@ -3,5 +3,6 @@
 # Digital Innovation One
 # 18.04.2022 - 19h51
 
-USE ESTUDO;
+CREATE DATABASE CONSULTA;
 
+USE CONSULTA;
