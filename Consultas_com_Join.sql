@@ -53,6 +53,13 @@ INSERT INTO `videos_canais` (`id_videos_canais`, `id_canal`, `id_video`) VALUES
 # Alterando campos de nome id, para serem chaves primárias (PK)
 ALTER TABLE videos ADD PRIMARY KEY (id_video);
 ALTER TABLE canais ADD PRIMARY KEY (id_canal);
+ALTER TABLE videos_canais ADD PRIMARY KEY (id_videos_canais);
+
+# Adicionando AUTO INCREMENT as chaves primárias
+# = 6 - iniciando do 6, 7, em diante. 
+ALTER TABLE videos MODIFY id_video INT (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 6;
+ALTER TABLE canais MODIFY id_canal INT (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 5;
+ALTER TABLE videos_canais MODIFY id_videos_canais INT (11) NOT NULL, AUTO_INCREMENT = 6;
 
 
 
