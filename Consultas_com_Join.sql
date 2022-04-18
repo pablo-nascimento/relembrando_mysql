@@ -61,6 +61,10 @@ ALTER TABLE videos MODIFY id_video INT (11) NOT NULL AUTO_INCREMENT, AUTO_INCREM
 ALTER TABLE canais MODIFY id_canal INT (11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 5;
 ALTER TABLE videos_canais MODIFY id_videos_canais INT (11) NOT NULL, AUTO_INCREMENT = 6;
 
+# Adicionando as chaves estrangeiras.
+ALTER TABLE videos_canais ADD FOREIGN KEY (id_canal) REFERENCES canais(id_canal);
+ALTER TABLE videos_canais ADD FOREIGN KEY(id_video) REFERENCES videos(id_video);
+
 
 
 
