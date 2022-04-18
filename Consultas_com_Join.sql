@@ -65,6 +65,20 @@ ALTER TABLE videos_canais MODIFY id_videos_canais INT (11) NOT NULL, AUTO_INCREM
 ALTER TABLE videos_canais ADD FOREIGN KEY (id_canal) REFERENCES canais(id_canal);
 ALTER TABLE videos_canais ADD FOREIGN KEY(id_video) REFERENCES videos(id_video);
 
+# Consultas das tabelas feitas de forma individual.
+SELECT * FROM videos_canais;
+SELECT * FROM videos;
+SELECT * FROM canais;
+
+# Consultas de várias tabelas.
+SELECT * FROM videos_canais JOIN videos ON videos.id_video = videos_canais.id_video;
+
+SELECT * FROM videos_canais JOIN videos ON videos.id_video = videos_canais.id_video
+JOIN canais ON videos_canais.id_canal = canais.id_canal;
+
+
+
+
 
 
 
