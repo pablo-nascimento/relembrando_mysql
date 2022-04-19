@@ -83,8 +83,14 @@ FROM videos_canais
 JOIN videos ON videos_canais.id_video = videos.id_video 
 JOIN canais ON videos_canais.id_canal = canais.id_canal;
 
+# INNER JOIN - Consultas que retornam valores presentes na consulta, nao trazendo valores nulos.
+# OUTER JOIN - Traz toda a consulta, incluindo a consulta que nao possui relacionamento no BD.
+# LEFT JOIN - Para consultas com tabelas a esquerda, que nao possuem relacionamento.
+# RIGHT JOIN - Para consultas com tabelas a direita, que nao possuem relacionamento.
 
-
+# Consulta com RIGHT JOIN
+SELECT * FROM videos_canais RIGHT JOIN videos ON videos_canais.id_video = videos.id_video;
+SELECT * FROM videos_canais RIGHT OUTER JOIN videos ON videos_canais.id_video = videos.id_video;
 
 
 
