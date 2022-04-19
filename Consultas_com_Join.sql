@@ -92,6 +92,17 @@ JOIN canais ON videos_canais.id_canal = canais.id_canal;
 SELECT * FROM videos_canais RIGHT JOIN videos ON videos_canais.id_video = videos.id_video;
 SELECT * FROM videos_canais RIGHT OUTER JOIN videos ON videos_canais.id_video = videos.id_video;
 
+# Clausula UNION - Unir duas consultas
+SELECT videos.id_video, videos.nome_video FROM videos LEFT OUTER JOIN videos_canais 
+ON videos_canais.id_video = videos.id_video
+UNION 
+SELECT canais.id_canal, canais.nome_canal FROM canais LEFT OUTER JOIN videos_canais
+ON videos_canais.id_canal = canais.id_canal;
+
+# Consultas multiplas com a Clausula WHERE. 
+SELECT * FROM videos_canais JOIN videos ON videos_canais.id_video = videos.id_video
+JOIN canais ON videos_canais.id_canal = canais.id_canal WHERE canais.id_canal = 2;
+
 
 
 
